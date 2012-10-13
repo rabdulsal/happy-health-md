@@ -1,0 +1,857 @@
+body {
+	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	padding-bottom: 10px;
+}
+
+header {
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+h1 {
+	font-size: 28px;
+	padding: 10px 0px 0px 10px;
+	text-align: center;
+}
+
+a {
+	color: #00B6E4;
+	text-decoration: none;
+}
+
+a:hover, .link a:hover {
+	text-decoration: underline;
+}
+
+aside {
+	float: left;
+	margin: 0 0 20px 20px;
+	width: 300px;	
+}
+
+article {
+	float: right;
+	width: 620px;
+	margin: 0 20px 20px 0;
+}
+
+article h1 {
+	color: #555;
+	text-shadow: 0 1px white;
+	clear: both;
+}
+
+body {
+	font-family: 'Droid Sans', sans-serif;
+	background: url('../Images/wood_pattern.png');
+	padding: 20px 0px;
+	margin: 0px;
+}
+
+label {
+	display: block;
+	padding: 7px 0;
+	font-size: 14px;
+	color: #000066;
+}
+
+textarea {
+	width: 90%;
+}
+
+input {
+	font-size: 12px;
+}
+
+img {
+	color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+/* ------------------------ SPLASH PAGE ------------------------------ */
+
+#splashBody, #splashBodySignIn {
+	background: url("../Images/Sky_Grass1.jpg") no-repeat;
+	padding: 20px;
+	margin: 0px;
+}
+
+.splash, #splashLogin {
+	width: 620px;
+	height: 445px;
+	margin: auto;
+	margin-top: 45px;
+	background: rgba(255,255,255,0.7);
+	border-radius: 10px;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border: 1px solid black; 
+}
+
+.splashBodySignIn {
+	background: url("../Images/Sky_Grass.jpg") no-repeat;
+}
+
+.splash #siteName, #splashLogin #siteName {
+	text-align: center;
+	font-weight: bold;
+}
+
+.splash #siteName img, #splashLogin #siteName img {
+	width: 400px;
+	margin-bottom: 10px;
+}
+
+#splashLogin {
+	height: 455px;
+}
+
+.splash ul {
+	padding: 20px;
+	list-style-type: none;
+}
+
+.splash li {
+	padding-bottom: 5px;
+}
+
+.splash li:last-child {
+	border: 1px solid grey;
+	width: 260px;
+	background: white;
+	color: black;
+	text-align: left;
+	padding: 5px;
+	margin-left: 60px;
+	border-radius: 6px;
+}
+
+/* ------------------------ BUTTONS ------------------------------ */
+
+.button, .signUpbutton a, .learnMore, #new_user_submit, #login_submit, #skinclick-submit, .splash a, .backButton a, .saveButton a, .nextButton a, #profile-buttons a {	
+	display: block;
+	background-color: white;
+	background: rgb(228, 108, 10);
+	color: white;
+	font-size: 24px;
+	margin: 0px 15px 15px 0px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+	text-decoration: none;
+	border: none;
+	box-shadow: 0px 2px 2px black;
+}	
+
+#new_user_submit, #login_submit, #skinclick-submit, .backButton a, .saveButton a, .nextButton a {
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 7px;
+}
+
+#new_user_submit:hover, #login_submit:hover, #skinclick-submit:hover {
+	cursor: pointer;
+}
+
+.splash p a:hover, .backButton a:hover, .nextButton a:hover {
+	background: -webkit-linear-gradient(top, #000099, #000066);
+}
+
+.signUpbutton {
+	float: right;
+	font-size: 20px;
+}
+
+.signUpbutton li {
+	display: inline-block;
+}
+
+.signUpbutton li:last-child {
+	margin-right: none;
+}
+
+.backButton a, .nextButton a {
+	background: -webkit-linear-gradient(top, #0000ff, #000099);
+}
+
+/* ------------------------ HOME PAGE ------------------------------ */
+
+
+
+/* --------------------- ALERT MESSAGES --------------------------- */
+
+
+
+/* ------------------------ BREADCRUMBS ----------------------------- */
+
+
+
+/* --------------------- NAVIGATION BAR --------------------------- */
+
+
+
+/* --------------------- DROPDOWN BAR --------------------------- */	
+
+
+
+/* ------------------- SIGNUP AND SIGNIN -------------------------- */
+
+.signUp, .signInSection, #splashSignIn {
+	background: white;
+	font-size: 18px;
+	color: black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.signInSection, #signUpImage, #splashSignIn {
+	float: left;
+	margin: 10px;
+	width: 305px;
+	border: 4px solid #E46C0A;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.signInSection h1, .signInSection p, #splashSignIn h1, .contentSection h2, .shadowBox h2 {
+	text-align: center;
+	/*color: -webkit-radial-gradient(circle, #545454, #3F3F3F);*/
+	background: #D1E0FF;
+	color: #000066;
+	margin: 0px;		
+	padding: 10px 10px 0 10px;
+}
+
+.signInSection p {
+	margin: 0;
+	padding: 0 0 5px 0;
+	font-size: 14px;
+	border-bottom: 2px solid #6699ff;
+}
+
+.signInSection form, #splashSignIn form, .shadowBox p {
+	color: black;
+	background: white;
+	padding: 10px;	
+}
+
+.signInSection fieldset li {
+	display: inline;
+}
+
+#splashSignIn {
+	float: none;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+
+#splashSignIn h1 {
+	border-bottom: 2px solid #6699ff;
+}
+
+#splashSignIn p {
+	font-size: 9px;
+	padding: 10px 0;
+}
+
+#splashSignIn a:hover {
+	text-decoration: underline;
+}
+
+#splashSignIn form {
+	padding-bottom: 0;
+}
+
+#signUpImage {
+	background: url("../images/Skincare 2.jpg") no-repeat;
+	height: 308px;
+	width: 328px;
+	margin-top: 80px;
+	border: 1px solid grey;
+}
+
+#login_username, #login_password, #confirm_password {
+	width: 220px;
+}
+
+/* ------------------------ HOMEPAGE ------------------------------ */
+
+
+
+/* ------------------------ SHADOWBOX ------------------------------ */
+
+
+
+/* ------------------------ FEATURES PAGE ---------------------------- */
+
+
+
+/*------------------- DASHBOARD NAVIGATION BAR -----------------------*/
+
+
+
+/*----------------- SPECIALIST VIEW-CLIENTS PAGE ----------------------------*/
+
+
+
+/* --------------- SPECIALIST DASHBOARD MAIN PAGE -------------------- */
+
+.triangle-top-whiteClients, .triangle-top-whiteClientClick, .triangle-top-clickExpand {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-bottom: 20px solid white;
+	border-right: 10px solid transparent;
+	margin: 0;
+	padding: 0;
+}
+
+.triangle-top-whiteClients {
+	top: -40px;
+	left: 8px;
+}
+
+.triangle-top-whiteClientClick {
+	top: -40px;
+	left: -158px;
+}
+
+.triangle-top-clickExpand {
+	top: -40px;
+	left: 500px;
+}
+
+.triangle-right {
+	position: relative;
+	top: 7px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #D9D9D9;
+	padding: 0;
+}
+
+.triangle-left-queue-expand {
+	position: relative;
+	top: 7px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #D9D9D9;
+	padding: 0;
+}
+
+
+
+/* ------------------------ FOOTER SECTION ------------------------- */
+
+
+
+/* ------------------------ HAPPYHEALTH HACKATHON EDITS ------------------------------ */
+
+.container_12 { /*--- id for the grand table housing all the data ---*/
+  background: url("../Images/white_wall.png");
+  margin: auto;
+  width: 980px;
+  clear: both;
+  box-shadow: 0 10px 20px black;
+  overflow: hidden;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+#nav-tab {
+	margin: 0 10px;
+	height: 100%;
+}
+
+#nav-tab li {
+	border: 2px solid #006;
+	margin: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #006;
+	background: #D1E0FF;
+	padding-left: 5px;
+}
+
+#nav-tab li:hover {
+	-webkit-transform: scale(1.07);
+}
+
+#nav-tab a:hover {
+	text-decoration: none;
+}
+
+#nav-tab .tab-open {
+	-webkit-transform: scale(1.07);
+	color: white;
+	background: #006;
+}
+
+#medications li {
+	display: block;
+}
+
+#print-to {
+	float: right;
+	margin-bottom: -20px;
+}
+
+#print-to li {
+	display: inline-block;	
+	margin-right: 10px;
+	color: #555;
+	text-shadow: 0 1px #fff;
+}
+
+#print-to li:last-child {
+	margin-right: -8px;
+	padding-right: 0;
+}
+
+.fieldset-buttons {
+	float: right;
+}
+
+#header-content {
+	width: 980px;
+	margin: auto;
+	padding-top: 15px;
+}
+
+.edit-form {
+	position: relative;
+	bottom: 28px;
+	left: 538px;	
+}
+
+.read-more {
+	float: right;
+}
+
+#header-content li, .nav-links a, #site-name a {
+	color: #555;
+	text-shadow: 0 1px #fff;
+	display: inline-block;
+}
+
+#site-name a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav-links {
+	float: right;
+	margin-left: 15px;
+	font-size: 18px;
+	letter-spacing: -1px;
+}
+
+#site-name a:hover, .nav-links a:hover {
+	color: #00B6E4;
+}
+
+#user-image {
+	width: 915px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#user-image h1 {
+	text-transform: none;
+	color: black;
+	padding-left: 0;
+}
+
+#user-image li h3{
+	text-shadow: 0 1px white;	
+}
+
+#user-image a {
+	color: black;
+}
+
+#user-image a:hover {
+	color: rgb(228, 108, 10);
+}
+
+#user-image li {
+	color: #555;
+	text-shadow: 0 1px #fff;
+	display: inline-block;
+	/*border: 1px solid black;*/
+	padding: 0px;
+	margin: 0 10px 10px 0px;
+	font-size: 12px;
+}
+
+#user-image li:last-child {
+	margin-right: 0;
+}
+
+#user-image img {
+	height: 70px;
+	width: 75px;
+	border: none;
+}
+
+#specialist-photo img {
+	height: 70px;
+	width: 70px;
+	margin: 20px 0 0 20px;
+}
+
+.demoBackground {
+	width: 915px;
+	border: 2px solid #000066;
+	border-radius: 10px;
+	background: #D1E0FF;
+	margin: 10px 10px;
+	padding: 0 10px;
+}
+
+.formsBackground, .demoBackground {
+	float: left;
+	width: 580px;
+}
+
+.formsBackground h2 {
+	color: #000066;
+	margin-top: 10px;
+}
+
+.formsBackground li, .demoBackground li {
+	display: inline-block;
+}
+
+.formsBackground legend, .demoBackground legend {
+	font-weight: bold;
+	color: #000066;
+}
+
+.formsBackground textarea {
+	width: 425px;
+	height: 50px;
+}
+
+.formsBackground table img {
+	width: 150px;
+	height: 63px;
+}
+
+.demoBackground {
+	margin-bottom: 20px;
+}
+
+.demoBackground ul {
+	clear: both;
+}
+
+.demoBackground li {
+	display: inline-block;
+}
+
+#DOB, .address, #phone_number, #email, #pharmacy_name, 
+#pharmacy_phone, #referring_specialist, #specialist_practice, 
+#specialist_address, #specialist_address2, #insurer, #policy_number, 
+#credit-card-address, #credit-card-address-2 {
+	width: 205px;
+	margin-right: 10px;
+}
+
+#city, #zipcode, #specialist_city, #practice_zipcode, #pharmacy_city, #pharmacy_zipcode {
+	width: 150px;
+	margin-right: 5px;
+}
+
+#state, #specialist_state, #pharmacy_state {
+	width: 105px;
+	margin-right: 5px;
+}
+
+#cardholer-name, #card-last-name, #credit-card-number {
+	width: 130px;
+}
+
+#credit-card-city, #credit-card-zipcode, #credit-card-country, #credit-card-states, #ccv-number, #card-type, #expiration-month, #expiration-year {
+	width: 100px;
+}
+
+.yes_no {
+	font-size: 10px;
+}
+
+.med_conditions, .customer_type {
+	font-size: 12px;
+}
+
+.dashboard #search_bar	{
+	width: 227px;
+	margin: auto;
+}	
+
+.dashboard select {
+	width: 120px;
+}
+
+#TOS  {
+	font-size: 10px;
+	font-style: italic;
+}
+
+.formsBackground dd {
+	font-style: italic;
+	font-size: 13px;
+}
+
+.formsBackground td {
+	padding-right: 8px;
+}
+	
+.formFont {
+	font-size: 14px;
+	color: black;
+	display: inline;
+}	
+
+/* ----------------- jQUERY CSS -------------------- */
+
+.ui-tabs { 
+	position: relative; 
+	padding: .2em; zoom: 1;
+} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+
+.ui-tabs .ui-tabs-nav { 
+	margin: 0; 
+	padding: .2em .2em 0; 
+}
+
+.ui-tabs .ui-tabs-nav li { 
+	list-style: none; 
+	display: inline-block; 
+	position: relative; 
+	top: 1px; 
+	margin: 0 .2em 1px 0; 
+	border-bottom: 0 !important; 
+	padding: 0; 
+	white-space: nowrap; 
+}
+
+.ui-tabs .ui-tabs-nav li a { 
+	float: left; 
+	padding: .5em 1em; 
+	text-decoration: none; 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { 
+	margin-bottom: 0; 
+	padding-bottom: 1px; 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { 
+	cursor: text; 
+}
+
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { 
+	cursor: pointer; 
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.ui-tabs .ui-tabs-panel { 
+	display: block; 
+	border-width: 0; 
+	padding: 1em 1.4em; 
+	background: none; 
+}
+
+.ui-tabs .ui-tabs-hide { 
+	display: none !important; 
+}
+
+/* ----------------- TEST CODE ------------------------- */
+
+#splash-title, #subtitle, #splash-text, #signup-text, .headings {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 5px black;
+    margin-bottom: 10px;
+}
+
+#splash-title {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+#subtitle {
+    font-size: 40px;
+}
+
+#splash-text, #signup-text {
+    font-size: 20px;
+}
+
+.splash-page {
+    margin: auto;
+    clear: both; 
+    width: 950px;   
+}
+
+.explanation {
+	margin: 0 auto;
+	width: 920px;			
+}
+
+.description {
+    height: 135px;
+    padding: 10px;
+    margin: 10px auto;
+    background: white;
+    box-shadow: 0 2px 5px grey;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: inline-block;
+    width: 280px;
+}
+
+.description h1 {
+	padding: 0;	   
+}
+
+/* ------------------ TEXT CSS ------------------------- */		
+	
+.functionality { /* duplicated from .description */
+	background: white;
+	box-shadow: 0 2px 5px grey;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	color: #767676
+}
+
+.functionality h3 {
+	margin-bottom: 5px;
+}	
