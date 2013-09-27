@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @patient.language %>
+</p>
+
+<p>
+  <b>Physician:</b>
+  <%= @patient.physician %>
+</p>
+
+<p>
+  <b>Registered:</b>
+  <%= @patient.registered %>
+</p>
+
+<p>
+  <b>Copay paid:</b>
+  <%= @patient.copay_paid %>
+</p>
+
+<p>
+  <b>Insurance verified:</b>
+  <%= @patient.insurance_verified %>
+</p>
+
+<p>
+  <b>Scheduled time:</b>
+  <%= @patient.scheduled_time %>
+</p>
+
+<p>
+  <b>Arrival time:</b>
+  <%= @patient.arrival_time %>
+</p>
+
+<p>
+  <b>Arrived:</b>
+  <%= @patient.arrived %>
+</p>
+
+<p>
+  <b>Arrival status:</b>
+  <%= @patient.arrival_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

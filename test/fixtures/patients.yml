@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  language: MyString
+  physician: MyString
+  registered: MyString
+  copay_paid: MyString
+  insurance_verified: MyString
+  scheduled_time: 2013-09-25 22:21:36
+  arrival_time: 2013-09-25 22:21:36
+  arrived: false
+  arrival_status: 2013-09-25 22:21:36
+
+two:
+  name: MyString
+  language: MyString
+  physician: MyString
+  registered: MyString
+  copay_paid: MyString
+  insurance_verified: MyString
+  scheduled_time: 2013-09-25 22:21:36
+  arrival_time: 2013-09-25 22:21:36
+  arrived: false
+  arrival_status: 2013-09-25 22:21:36

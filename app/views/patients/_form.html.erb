@@ -1,0 +1,57 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :physician %><br />
+    <%= f.text_field :physician %>
+  </div>
+  <div class="field">
+    <%= f.label :registered %><br />
+    <%= f.text_field :registered %>
+  </div>
+  <div class="field">
+    <%= f.label :copay_paid %><br />
+    <%= f.text_field :copay_paid %>
+  </div>
+  <div class="field">
+    <%= f.label :insurance_verified %><br />
+    <%= f.text_field :insurance_verified %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_time %><br />
+    <%= f.time_select :scheduled_time %>
+  </div>
+  <div class="field">
+    <%= f.label :arrival_time %><br />
+    <%= f.time_select :arrival_time %>
+  </div>
+  <div class="field">
+    <%= f.label :arrived %><br />
+    <%= f.check_box :arrived %>
+  </div>
+  <div class="field">
+    <%= f.label :arrival_status %><br />
+    <%= f.time_select :arrival_status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,388 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (22.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePatients (20130926032136)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "language" varchar(255), "physician" varchar(255), "registered" varchar(255), "copay_paid" varchar(255), "insurance_verified" varchar(255), "scheduled_time" time, "arrival_time" time, "arrived" boolean, "arrival_status" time, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130926032136')[0m
+  [1m[35m (9.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/patients/new" for 127.0.0.1 at 2013-09-25 22:23:43 -0500
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.erb (89.9ms)
+  Rendered patients/new.html.erb within layouts/application (102.4ms)
+Compiled application.css  (1ms)  (pid 46784)
+Compiled jquery.js  (4ms)  (pid 46784)
+Compiled jquery_ujs.js  (0ms)  (pid 46784)
+Compiled patients.js  (323ms)  (pid 46784)
+Compiled application.js  (394ms)  (pid 46784)
+Completed 200 OK in 797ms (Views: 666.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-25 22:23:44 -0500
+Served asset /jquery.js - 200 OK (20ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-25 22:23:44 -0500
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-25 22:23:44 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-25 22:23:44 -0500
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2013-09-25 22:23:44 -0500
+Served asset /patients.js - 200 OK (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/patients" for 127.0.0.1 at 2013-09-25 22:49:37 -0500
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (4.0ms)[0m  [1mSELECT "patients".* FROM "patients" [0m
+  Rendered patients/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 122ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/rabdulsal/happy-health-md/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>DoctorPortal</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1004078405824000577_70179852231560'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/patients" for 127.0.0.1 at 2013-09-25 22:58:21 -0500
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.8ms)[0m  [1mSELECT "patients".* FROM "patients" [0m
+  Rendered patients/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 168ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/rabdulsal/happy-health-md/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>DoctorPortal</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3651337958859033265_70287105213080'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/patients" for 127.0.0.1 at 2013-09-25 23:15:24 -0500
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.7ms)[0m  [1mSELECT "patients".* FROM "patients" [0m
+  Rendered patients/index.html.erb within layouts/application (8.1ms)
+Compiled bootstrap_and_overrides.css  (1706ms)  (pid 46878)
+Compiled application.css  (1723ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-popover.js  (1ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 46878)
+Compiled twitter/bootstrap/bootstrap-affix.js  (1ms)  (pid 46878)
+Compiled twitter/bootstrap.js  (560ms)  (pid 46878)
+Compiled bootstrap.js  (148ms)  (pid 46878)
+Compiled application.js  (748ms)  (pid 46878)
+Completed 200 OK in 2908ms (Views: 2856.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /application.css - 304 Not Modified (81ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (23ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:27 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /bootstrap.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap.js - 200 OK (61ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (21ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /application.js - 200 OK (51ms)
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2013-09-25 23:15:28 -0500
+Served asset /patients.js - 304 Not Modified (2ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.3ms)[0m  SELECT "patients".* FROM "patients" 
+  Rendered patients/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2013-09-25 23:36:36 -0500
+Served asset /patients.js - 304 Not Modified (0ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.3ms)[0m  [1mSELECT "patients".* FROM "patients" [0m
+  Rendered patients/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:29 -0500
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /patients.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-25 23:59:30 -0500
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
