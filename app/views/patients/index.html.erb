@@ -1,40 +1,71 @@
 <h1>Patient List</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Language</th>
-    <th>Physician</th>
-    <th>Registered</th>
-    <th>Copay paid</th>
-    <th>Insurance verified</th>
-    <th>Scheduled time</th>
-    <th>Arrival time</th>
-    <th>Arrived</th>
-    <th>Arrival status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @patients.each do |patient| %>
-  <tr>
-    <td><%= patient.name %></td>
-    <td><%= patient.language %></td>
-    <td><%= patient.physician %></td>
-    <td><%= patient.registered %></td>
-    <td><%= patient.copay_paid %></td>
-    <td><%= patient.insurance_verified %></td>
-    <td><%= patient.scheduled_time %></td>
-    <td><%= patient.arrival_time %></td>
-    <td><%= patient.arrived %></td>
-    <td><%= patient.arrival_status %></td>
-    <td><%= link_to 'Show', patient %></td>
-    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-    <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+<div class="patient-card">
+    <div class="patient-avatar left">
+        <strong>Signed In?</strong> <%= patient.arrived %>
+    </div>
+
+    <table>    
+
+        <tr>
+            <td>
+                <strong><%= patient.name %></strong>
+            </td>
+            <td>
+                <strong>Language:</strong> <%= patient.language %>
+            </td>
+            <td>
+                <strong>Physician:</strong> <%= patient.physician %>
+            </td>
+        </tr>
+        <tr>       
+            <td>
+                <strong>Scheduled time</strong> <%= patient.scheduled_time %>
+            </td>
+            <td>
+                <strong>Arrival time</strong> <%= patient.arrival_time %>
+            </td>        
+            <td>
+                <strong>Arrival status</strong> <%= patient.arrival_status %>
+            </td>   
+          </tr>
+          <tr>
+            
+            <td>
+                <strong>Registered</strong>
+                <a data-toggle="modal" href="#registerModal"><%= patient.registered %></a>
+
+                <%= render 'register_modal' %>
+                
+            </td>
+            <td>
+                <strong>Insurance verified</strong>
+                <a data-toggle="modal" href="#insuranceModal"><%= patient.insurance_verified %></a>
+                
+                <%= render 'insurance_modal' %>
+
+            </td>
+            <td class="dropdown">
+                <strong>Copay paid</strong>
+                <a data-toggle="modal" href="#copayModal"><%= patient.copay_paid %></a>
+                
+                <%= render 'copay_modal' %>
+
+
+            </td>            
+        </tr>            
+    </table>
+
+    <div>
+        <%= link_to 'Show', patient %>
+        <%= link_to 'Edit', edit_patient_path(patient) %>
+        <%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+</div>
+
 <% end %>
-</table>
 
 <br />
 

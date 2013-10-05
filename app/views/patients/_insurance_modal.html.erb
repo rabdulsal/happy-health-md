@@ -1,0 +1,116 @@
+<div class="modal hide fade" id="insuranceModal" tabindex="-1" role="dialog" aria-labelledby="insuranceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h2 class="modal-title">Patient's Insurance Information</h2>
+        </div>
+        <div class="modal-body">
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Insurance Information
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <h4 class="inline">Coverage Status:</h4>
+                  <span>
+                      <strong>Active</strong> since <strong>1/1/2013</strong>
+                  </span>
+
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Insurance Carrier</th>
+                        <th>Subscriber ID</th>
+                        <th>Group ID</th>
+                        <th>Group Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td>BCBS IL</td>
+                      <td>ABCDE1</td>
+                      <td>1234A</td>
+                      <td>Work Insurance</td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Collapse -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Insurance Card Copies
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div>
+                    <a href="#" class="pull-right">Print</a>
+                    <img src="http://studenthealth.sa.ucsb.edu/CMSMedia/Images/uc%20ship%20id%20card%204.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Collapse -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  Deductible Information
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <table class="table">            
+                      <thead>
+                          <tr>
+                              <th>Type</th>
+                              <th>Network</th>
+                              <th>Base Period</th>
+                              <th>Remaining</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="2">Individual</td>
+                          <td>IN</td>
+                          <td>$2500</td>
+                          <td>$1000</td>
+                        </tr>
+                        <tr>
+                          
+                          <td>OUT</td>
+                          <td>$5000</td>
+                          <td>$5000</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="2">Family</td>
+                          <td>IN</td>
+                          <td>$10,000</td>
+                          <td>$5000</td>
+                        </tr>
+                        <tr>
+                          
+                          <td>OUT</td>
+                          <td>$30,000</td>
+                          <td>$25,000</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>                             
+        </div> <!-- modal body -->
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>                   
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

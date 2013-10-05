@@ -11,3 +11,59 @@
  *= require_self
  *= require_tree .
  */
+
+ p, td {
+ 	color: #273e54;
+ }
+
+ .left {
+ 	float: left;
+ }
+
+ .right {
+ 	float: right;
+ }
+
+ .patient-card, .calendar-card {
+ 	border: 2px solid #c7d7e5;
+ 	background: #f1f1f4;
+ 	border-radius: 5px;
+ 	padding: 5px;
+ }
+
+ .calendar-card {
+ 	min-height: 500px;
+ }
+
+ .calendar-card p {
+ 	margin: 0 0;
+ }
+
+ .pad-right {
+
+ }
+
+ .patient-avatar {
+ 	padding-right: 5px;
+ 	min-width: 120px;
+ }
+
+ .clear {
+ 	clear: both;
+ }
+
+ .inline {
+ 	display: inline-block;
+ }
+
+ #insuranceModal {
+ 	position: absolute;
+ 	top: 0px;
+ }
+ 	#insuranceModal .modal-body {
+ 		max-height: 100%;
+ 	}
+
+ .ratio {
+ 	min-width: 200px;
+ }
