@@ -1,72 +1,320 @@
 <h1>Patient List</h1>
 
-<% @patients.each do |patient| %>
-
-<div class="patient-card">
-    <div class="patient-avatar left">
-        <strong>Signed In?</strong> <%= patient.arrived %>
-    </div>
-
-    <table>    
-
-        <tr>
-            <td>
-                <strong><%= patient.name %></strong>
-            </td>
-            <td>
-                <strong>Language:</strong> <%= patient.language %>
-            </td>
-            <td>
-                <strong>Physician:</strong> <%= patient.physician %>
-            </td>
-        </tr>
-        <tr>       
-            <td>
-                <strong>Scheduled time</strong> <%= patient.scheduled_time %>
-            </td>
-            <td>
-                <strong>Arrival time</strong> <%= patient.arrival_time %>
-            </td>        
-            <td>
-                <strong>Arrival status</strong> <%= patient.arrival_status %>
-            </td>   
-          </tr>
-          <tr>
-            
-            <td>
-                <strong>Registered</strong>
-                <a data-toggle="modal" href="#registerModal"><%= patient.registered %></a>
-
-                <%= render 'register_modal' %>
-                
-            </td>
-            <td>
-                <strong>Insurance verified</strong>
-                <a data-toggle="modal" href="#insuranceModal"><%= patient.insurance_verified %></a>
-                
-                <%= render 'insurance_modal' %>
-
-            </td>
-            <td class="dropdown">
-                <strong>Copay paid</strong>
-                <a data-toggle="modal" href="#copayModal"><%= patient.copay_paid %></a>
-                
-                <%= render 'copay_modal' %>
-
-
-            </td>            
-        </tr>            
-    </table>
-
-    <div>
-        <%= link_to 'Show', patient %>
-        <%= link_to 'Edit', edit_patient_path(patient) %>
-        <%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+<div>
+    <%#= link_to 'New Patient', new_patient_path, class: "push-down btn" %>
+    <a href="#myModal" role="button" class="btn push-down" data-toggle="modal">New Patient</a>
 </div>
 
-<% end %>
 
-<br />
+<% @patients.each do |patient| %>
 
-<%= link_to 'New Patient', new_patient_path %>
+    <!-- New Patient Modal -->
+    <div id="myModal" class="modal hide fade long-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title">New Patient Appointment</h2>
+                </div>
+                  <div class="modal-body">
+                    <%= form_for(Patient.new) do |f| %>
+
+                        <ul id="patient-info" class="inline-list list-third-length">
+                          <li class="field">
+                            <%= f.label :name %><br />
+                            <%= f.text_field :name %>
+                          </li>
+                          <li class="field">
+                            <%= f.label :language %><br />
+                            <%= f.text_field :language %>
+                          </li>
+                          <li class="field">
+                            <%= f.label :physician %><br />
+                            <%= f.text_field :physician %>
+                          </li>
+                      </ul>
+
+                      <ul class="field">
+                        <li class="inline"><%= f.check_box :registered %></li>
+                        <li class="inline"><%= f.label :registered %></li>    
+                      </ul>
+                      <ul class="field">
+                        <li class="inline"><%= f.check_box :copay_paid %></li>
+                        <li class="inline"><%= f.label :copay_paid %></li>
+                      </ul>
+                      <ul class="field">
+                        <li class="inline"><%= f.check_box :insurance_verified %></li>
+                        <li class="inline"><%= f.label :insurance_verified %></li>
+                      </ul>
+                      
+                      <!--<div class="field">
+                        <%#= f.label :scheduled_time %><br />
+                        <%#= f.datetime_select :scheduled_time %>
+                      </div>
+                      <div class="field">
+                        <%#= f.label :arrival_time %><br />
+                        <%#= f.datetime_select :arrival_time %>
+                      </div>
+                      <div class="field">
+                        <%#= f.label :arrival_status %><br />
+                        <%#= f.datetime_select :arrival_status %>
+                      </div> --> 
+
+                      <ul class="inline-list">
+                          <h4>Appointment Date</h4>
+
+                      <!-- MONTH -->
+                          <li>
+                            <strong>Month</strong></br />
+                            <select id="patient_scheduled_time_2i" name="patient[scheduled_time(2i)]" class="span2">
+                              <option value="1">January</option>
+                              <option value="2">February</option>
+                              <option value="3">March</option>
+                              <option value="4">April</option>
+                              <option value="5">May</option>
+                              <option value="6">June</option>
+                              <option value="7">July</option>
+                              <option value="8">August</option>
+                              <option value="9">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                          </li>
+
+                        <!-- DAY -->
+                          <li>
+                            <strong>Day</strong></br />
+                            <select id="patient_scheduled_time_3i" name="patient[scheduled_time(3i)]" class="span2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                              <option value="24">24</option>
+                              <option value="25">25</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+                              <option value="29">29</option>
+                              <option value="30">30</option>
+                              <option value="31">31</option>
+                            </select>
+                          </li>
+                          <li>
+                            <!-- YEAR -->
+                              <strong>Year</strong></br />
+                              <select id="patient_scheduled_time_1i" name="patient[scheduled_time(1i)]" class="span2">
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                              </select>
+                          </li>
+                        </ul>
+                        <ul class="inline-list">
+                          <h4>Appointment Time</h4>
+
+                          <!-- HOUR -->
+                          <li>
+                            <strong>Hour</strong></br />
+                            <select id="patient_scheduled_time_4i" name="patient[scheduled_time(4i)]" class="span2">
+                              <option value="00">00</option>
+                              <option value="01">01</option>
+                              <option value="02">02</option>
+                              <option value="03">03</option>
+                              <option value="04">04</option>
+                              <option value="05">05</option>
+                              <option value="06">06</option>
+                              <option value="07">07</option>
+                              <option value="08">08</option>
+                              <option value="09">09</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                            </select>
+                          </li>
+
+                          <!-- MINUTE -->
+                          <li>
+                            <strong>Minute</strong></br />
+                            <select id="patient_scheduled_time_5i" name="patient[scheduled_time(5i)]" class="span2">
+                              <option value="00">00</option>
+                              
+                              <option value="15">15</option>
+                              
+                              <option value="30">30</option>
+                              
+                              <option value="45">45</option>
+                              
+                            </select>
+                          </li>
+                        </ul>  
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <%= f.submit "Save Appointment", class: "btn btn-success" %>
+                    </div>
+                  <% end %>
+                </div>
+            </div>
+    </div><!-- New Patient Modal -->
+
+    <div class="clear">
+    
+
+    <div class="patient-card">
+        <div class="patient-avatar pull-left">
+            
+            <%= image_tag "Teresa Nam.jpg", class: "patient-photo img-rounded" %>           
+
+        </div><!-- Patient avatar -->
+
+        <table>    
+
+            <tr>
+                <td>
+                    <strong><%= patient.name %></strong>
+                </td>
+                <td>
+                    <strong>Language:</strong> <%= patient.language %>
+                </td>
+                <td>
+                    <strong>Physician:</strong> <%= patient.physician %>
+                </td>
+            </tr>
+            <tr>       
+                <td>
+                    <strong>Scheduled time</strong> <%= patient.scheduled_time %>
+                </td>
+                <td>
+                    <strong>Arrival time</strong> <%= patient.arrival_time %>
+                </td>        
+                <td>
+                    <strong>Arrival status</strong> 
+                        <% if patient.arrival_status == nil %>
+                            <p class="neutral">En-route</p>
+                        <% elsif patient.arrival_status > 0  %>
+                            <p class="good"><%= patient.status_calc %></p>
+                        <% elsif patient.arrival_status < 0 %>
+                            <p class="bad"><%= patient.status_calc %></p>
+                        <% elsif patient.arrival_status = 0 %>
+                            <p class="good"><%= patient.status_calc %></p>
+                        <% end %>
+                </td>   
+              </tr>
+              <tr>            
+                <td>
+                    <strong>Registered</strong>
+                    <a class="modal-link" data-toggle="modal" href="#registerModal"><%= patient.registered %></a>
+
+                    <%= render 'register_modal' %>
+                    
+                </td>
+                <td>
+                    <strong>Insurance verified</strong>
+                    <a class="modal-link" data-toggle="modal" href="#insuranceModal"><%= patient.insurance_verified %></a>
+                    
+                    <%= render 'insurance_modal' %>
+
+                </td>
+                <td class="dropdown">
+                    <strong>Copay paid</strong>
+                    <a class="modal-link" data-toggle="modal" href="#copayModal"><%= patient.copay_paid %></a>
+                    
+                    <%= render 'copay_modal' %>
+
+                </td>            
+            </tr>            
+        </table>
+
+        <!--<div class="btn-group clear">
+            
+                <%#= link_to 'Edit', edit_patient_path(patient), class: "btn btn-success span4" %>
+            
+                
+           
+        </div>-->
+        <div class="dropdown clear push-up">
+          <!-- Link or button to toggle dropdown -->
+            <div class="btn-group card-width">
+                <% if patient.arrived == true %>
+                    <a class="btn button-link btn-warning half-width" data-toggle="dropdown" href="#">Sign-out</a>
+                <% else %>
+                    <a class="btn button-link btn-info half-width" data-toggle="dropdown" href="#">Sign-in</a>
+                <% end %>
+                <ul class="dropdown-menu padded" role="menu" aria-labelledby="dLabel">
+                    <%= form_for patient do |f| %>
+
+                        <% if patient.arrived == true %>
+                            <li>
+                                <%= f.check_box :exit, checked: true %> Patient leaving
+                            </li>               
+                            <li class="divider"></li>
+                            <li>
+                                <%= f.submit "Check-out", class: "btn btn-primary" %>  
+                            </li>
+
+                        <% else %>
+                             <li>
+                                <%= f.check_box :arrived, checked: true %> Patient arrived
+                            </li>
+                            <li>
+                                <%= f.hidden_field :arrival_time, value: DateTime.now %>
+                            </li>               
+                            <li class="divider"></li>
+                            <li>
+                                <%= f.submit "Check-in", class: "btn btn-primary" %>  
+                            </li>
+                        <% end %>
+
+                    <% end %>
+                  </ul>              
+                <%= link_to 'Cancel Appointment', patient, method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' }, class: "btn btn-danger half-width button-link" %>
+            </div><!-- Sign-in/out buttons -->                    
+        </div><!-- Dropdown -->
+    </div>
+
+    <br/>
+
+    <% end %>
+
+</div> <!-- Patient Cards container -->
+
+

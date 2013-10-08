@@ -1,6 +1,18 @@
 class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
+
+  before_filter :check_in
+
+  def check_in
+    if params[:patient] && params[:patient]["arrived"] == true
+      @patient = Patient.find params[:id]
+      time_now = DateTime.now
+      @patient.arrival_time = time_now  
+      @patient.save    
+    end
+  end
+
   def index
     @patients = Patient.all
 
@@ -15,6 +27,9 @@ class PatientsController < ApplicationController
   def show
     @patient = Patient.find(params[:id])
 
+    # Set arrival_status to Late or On-time
+       
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @patient }
@@ -25,6 +40,7 @@ class PatientsController < ApplicationController
   # GET /patients/new.json
   def new
     @patient = Patient.new
+    @patient.appointments << Appointment.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,11 +56,11 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.json
   def create
-    @patient = Patient.new(params[:patient])
+    @patient = Patient.new(params[:patient])    
 
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to patients_path, notice: '#{@patient.name}\'s appointment created.' }
         format.json { render json: @patient, status: :created, location: @patient }
       else
         format.html { render action: "new" }
@@ -60,7 +76,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.update_attributes(params[:patient])
-        format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }
+        format.html { redirect_to patients_path, notice: '#{@patient.name}\'s appointment updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

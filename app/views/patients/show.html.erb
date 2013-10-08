@@ -32,12 +32,12 @@
 
 <p>
   <b>Scheduled time:</b>
-  <%= @patient.scheduled_time %>
+  <%= @patient.pretty_time @patient.scheduled_time %>
 </p>
 
 <p>
   <b>Arrival time:</b>
-  <%= @patient.arrival_time %>
+  <%= @patient.pretty_time @patient.arrival_time %>
 </p>
 
 <p>
@@ -47,9 +47,14 @@
 
 <p>
   <b>Arrival status:</b>
-  <%= @patient.arrival_status %>
+  <%= @patient.status_calc %>
+</p>
+
+<p>
+  <b>Left?</b>
+  <%= @patient.exit %>
 </p>
 
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to 'All Patients', patients_path %>

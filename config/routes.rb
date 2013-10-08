@@ -1,4 +1,10 @@
 DoctorPortal::Application.routes.draw do
+  
+  root to: "patients#index"
+
+  resources :appointments
+
+
   resources :patients
 
 

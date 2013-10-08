@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  scheduled_date: 2013-10-05
+  scheduled_time: 2013-10-05 12:10:26
+  arrived: false
+  left: false
+  arrival_status: MyString
+
+two:
+  scheduled_date: 2013-10-05
+  scheduled_time: 2013-10-05 12:10:26
+  arrived: false
+  left: false
+  arrival_status: MyString

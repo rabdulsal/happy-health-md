@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Scheduled date:</b>
+  <%= @appointment.scheduled_date %>
+</p>
+
+<p>
+  <b>Scheduled time:</b>
+  <%= @appointment.pretty_time(@appointment.scheduled_time) %>
+</p>
+
+<p>
+  <b>Arrived:</b>
+  <%= @appointment.arrived %>
+</p>
+
+<p>
+  <b>Left:</b>
+  <%= @appointment.left %>
+</p>
+
+<p>
+  <b>Arrival status:</b>
+  <%= @appointment.arrival_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

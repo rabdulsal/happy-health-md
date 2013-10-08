@@ -12,10 +12,33 @@
  *= require_tree .
  */
 
- p, td {
- 	color: #273e54;
+ body {
+ 	background-color: #eee !important;
  }
 
+ a {
+ 	color: #0088cc !important;
+ }
+
+/* p, td {
+ 	color: #273e54;
+ }
+*/
+td {
+	vertical-align: top;
+	padding: 2px 5px;
+}
+ ul, ol {
+ 	margin: 0 0 10px 0 !important;
+ }
+
+.button-link {
+	color: #fff !important;
+}
+
+/*.modal-link {
+	color: blue;
+}*/
  .left {
  	float: left;
  }
@@ -25,10 +48,11 @@
  }
 
  .patient-card, .calendar-card {
- 	border: 2px solid #c7d7e5;
- 	background: #f1f1f4;
+ 	border: 1px solid #f8f8f8;
+ 	background: #fff;
  	border-radius: 5px;
- 	padding: 5px;
+ 	padding: 10px;
+ 	box-shadow: 0 2px 2px #555;
  }
 
  .calendar-card {
@@ -39,8 +63,8 @@
  	margin: 0 0;
  }
 
- .pad-right {
-
+ .inline-list li {
+ 	display: inline-block;
  }
 
  .patient-avatar {
@@ -56,14 +80,73 @@
  	display: inline-block;
  }
 
- #insuranceModal {
+ #insuranceModal, .long-modal {
  	position: absolute;
- 	top: 0px;
+ 	top: 0px !important;
  }
- 	#insuranceModal .modal-body {
+ 	#insuranceModal .modal-body, .long-modal .modal-body {
  		max-height: 100%;
  	}
 
  .ratio {
  	min-width: 200px;
  }
+
+ .patient-photo {
+ 	max-height: 100px;
+ }
+
+.padded, .padded li {
+	padding: 0 10px;
+}
+
+.divider {
+	padding: 0 0;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.half-width {
+	width: 50%;
+}
+
+#patient-info input {
+	width: 100%;
+}
+	#patient-info li {
+		margin-right: 10px;
+	}
+
+.list-third-length li {
+	max-width: 30%;
+	margin-right: 10px;
+}
+
+.card-width {
+	width: 90%;
+}
+
+.push-up {
+	margin-top: 10px;
+}
+
+.push-down {
+	margin-bottom: 10px !important;
+}
+
+.good {
+	font-weight: bold;
+	color: green;
+}
+
+.bad {
+	font-weight: bold;
+	color: red;
+}
+
+.neutral {
+	font-weight: bold;
+	color: blue;
+}
