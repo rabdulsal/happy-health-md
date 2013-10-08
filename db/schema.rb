@@ -11,33 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006172414) do
-
-  create_table "appointments", :force => true do |t|
-    t.date     "scheduled_date"
-    t.datetime "scheduled_time"
-    t.boolean  "arrived",        :default => false
-    t.boolean  "left",           :default => false
-    t.string   "arrival_status"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
-    t.integer  "patient_id"
-  end
+ActiveRecord::Schema.define(:version => 20130926032136) do
 
   create_table "patients", :force => true do |t|
     t.string   "name"
     t.string   "language"
     t.string   "physician"
-    t.boolean  "registered",         :limit => 255, :default => false
-    t.boolean  "copay_paid",         :limit => 255, :default => false
-    t.boolean  "insurance_verified", :limit => 255, :default => false
+    t.boolean  "registered",         :default => false
+    t.boolean  "copay_paid",         :default => false
+    t.boolean  "insurance_verified", :default => false
     t.datetime "scheduled_time"
     t.datetime "arrival_time"
-    t.boolean  "arrived"
+    t.boolean  "arrived",            :default => false
     t.float    "arrival_status"
-    t.datetime "created_at",                                           :null => false
-    t.datetime "updated_at",                                           :null => false
-    t.boolean  "exit",                              :default => false
+    t.boolean  "exit",               :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
 end
