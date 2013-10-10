@@ -1,0 +1,76 @@
+<div class="modal hide fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h2 class="modal-title">Contact Patient About Appointment</h2>
+        </div>
+        <div class="modal-body">
+          <h4>Contact Method</h4>
+          <p class="faded">
+            <i>Choose one, or multiple contact methods</i>
+          </p>
+          <ul class="inline-list">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Email</a> 
+              <ul class="dropdown-menu padded" role="menu" aria-labelledby="dLabel">
+                <li><strong>Patient email</strong></li>
+                <li><%= email %></li>
+              </ul>
+            </li> |
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Text</a>
+                <ul class="dropdown-menu padded" role="menu" aria-labelledby="dLabel">
+                  <li><strong>Patient text info</strong></li>
+                  <li><%= cell %></li>
+                </ul>
+            </li> | 
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Phone</a>
+              <ul class="dropdown-menu padded" role="menu" aria-labelledby="dLabel">
+                <li><strong>Patient phone number</strong></li>
+                <li><%= phone %></li>
+              </ul>
+            </li>
+          </ul>
+            <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Confirm Appointment
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <h4>Message:</h4>
+                    <p>
+                      Greetings valued customer! We wanted to confirm that you have an appointment scheduled for [appointment data and time]. Will you still be coming in for this scheduled visit?
+                    </p>                      
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Collapse -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Update Appointment
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <h4>Message:</h4>
+                    <p>
+                      Good news: another patient has canceled their appointment, meaning you can come in earlier! Would you like to come in at [new appointment time]?
+                    </p>   
+                </div>
+              </div>
+            </div>
+
+            
+          </div> 
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">Close</button>                   
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
