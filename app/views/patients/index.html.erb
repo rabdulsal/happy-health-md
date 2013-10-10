@@ -2,11 +2,13 @@
 
 <div>
     <%#= link_to 'New Patient', new_patient_path, class: "push-down btn" %>
-    <a href="#myModal" role="button" class="btn push-down" data-toggle="modal">New Patient</a>
+    <a href="#myModal" role="button" class="btn push-down" data-toggle="modal"><i class="icon-plus"></i> New Patient</a>
 </div>
 
+<% b = [] %>
 
 <% @patients.each do |patient| %>
+  
 
     <!-- New Patient Modal -->
     <div id="myModal" class="modal hide fade long-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -200,11 +202,13 @@
     
 
     <div class="patient-card">
-        <div class="patient-avatar pull-left">
-            
-            <%= image_tag "Teresa Nam.jpg", class: "patient-photo img-rounded" %>           
+        <ul class="patient-avatar pull-left sans-bullets">
+            <li>
+              <%= image_tag "Teresa Nam.jpg", class: "patient-photo img-rounded" %> 
+            </li>
+            <li><a href="#" class="btn push-up"><i class="icon-comment"></i> Contact</a></li>
 
-        </div><!-- Patient avatar -->
+        </ul><!-- Patient avatar -->
 
         <table>    
 
@@ -221,10 +225,16 @@
             </tr>
             <tr>       
                 <td>
-                    <strong>Scheduled time</strong> <%= patient.scheduled_time %>
+                    <strong>Scheduled time</strong><br />
+                    <%= patient.pretty_time patient.scheduled_time %>
                 </td>
                 <td>
-                    <strong>Arrival time</strong> <%= patient.arrival_time %>
+                    <strong>Arrival time</strong><br />
+                    <% if patient.arrival_time == nil %>
+                      
+                    <% else %>
+                      <%= patient.pretty_time patient.arrival_time %>
+                    <% end %>
                 </td>        
                 <td>
                     <strong>Arrival status</strong> 
@@ -241,27 +251,49 @@
               </tr>
               <tr>            
                 <td>
-                    <strong>Registered</strong>
-                    <a class="modal-link" data-toggle="modal" href="#registerModal"><%= patient.registered %></a>
-
-                    <%= render 'register_modal' %>
-                    
+                    <strong>Registered?</strong>
                 </td>
                 <td>
-                    <strong>Insurance verified</strong>
-                    <a class="modal-link" data-toggle="modal" href="#insuranceModal"><%= patient.insurance_verified %></a>
-                    
-                    <%= render 'insurance_modal' %>
-
+                    <strong>Insurance verified?</strong>
                 </td>
                 <td class="dropdown">
-                    <strong>Copay paid</strong>
-                    <a class="modal-link" data-toggle="modal" href="#copayModal"><%= patient.copay_paid %></a>
-                    
-                    <%= render 'copay_modal' %>
-
+                  <% a = [*0..200].sample %>
+                    <strong>Balance <span class="balance">$<%= a %></span></strong><br />
+                    <% b << a %>
                 </td>            
-            </tr>            
+            </tr>  
+            <tr>
+              <td>
+                <a class="btn btn-danger button-link push-up" data-toggle="modal" href="#registerModal">
+                  <% if patient.registered == false %>
+                        No
+                    <% else %>
+                      Yes
+                    <% end %>
+                </a>
+
+                    <%= render 'register_modal' %>
+              </td>
+              <td>
+                <a class="btn btn-danger button-link push-up" data-toggle="modal" href="#insuranceModal">
+                  <% if patient.insurance_verified == false %>
+                    No
+                  <% else %>
+                    Yes
+                  <% end %>
+                </a>
+                
+                <%= render 'insurance_modal' %>
+              </td>
+              <td>
+                <a class="btn btn-danger button-link push-up" data-toggle="modal" href="#copayModal">
+                  <%#= patient.copay_paid == false %>
+                   Pay 
+                </a>
+                
+                <%= render 'copay_modal', pay: a %>
+              </td>
+            </tr>          
         </table>
 
         <!--<div class="btn-group clear">
@@ -313,7 +345,9 @@
 
     <br/>
 
-    <% end %>
+<% end %>
+
+<%= b %>
 
 </div> <!-- Patient Cards container -->
 

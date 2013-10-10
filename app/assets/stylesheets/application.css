@@ -32,8 +32,16 @@ td {
  	margin: 0 0 10px 0 !important;
  }
 
+ .sans-bullets {
+ 	list-style: none;
+ }
+
 .button-link {
 	color: #fff !important;
+}
+
+.balance {
+	font-size: 16px;
 }
 
 /*.modal-link {
