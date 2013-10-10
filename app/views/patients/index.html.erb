@@ -28,33 +28,58 @@
                       <div class="modal-body">
                         <%= form_for(Patient.new) do |f| %>
 
-                            <ul id="patient-info" class="inline-list list-third-length">
+                            <ul class="inline-list list-third-length patient-info">
                               <li class="field">
                                 <%= f.label :name %><br />
                                 <%= f.text_field :name %>
                               </li>
                               <li class="field">
-                                <%= f.label :language %><br />
+                                <%= f.label "Speaking Language" %><br />
                                 <%= f.text_field :language %>
                               </li>
                               <li class="field">
-                                <%= f.label :physician %><br />
+                                <%= f.label "Physician seeing" %><br />
                                 <%= f.text_field :physician %>
                               </li>
-                          </ul>
+                            </ul>
+                            <ul class="inline-list list-third-length patient-info">
+                              <h4>Contact Information</h4>
+                              <li class="field">
+                                <%= f.label :cellphone %><br />
+                                <%= f.text_field :cellphone %>
+                              </li>
+                              <li class="field">
+                                <%= f.label :telephone %><br />
+                                <%= f.text_field :telephone %>
+                              </li>
+                              <li class="field">
+                                <%= f.label :email %><br />
+                                <%= f.text_field :email %>
+                              </li>
+                            </ul>
 
-                          <ul class="field">
-                            <li class="inline"><%= f.check_box :registered %></li>
-                            <li class="inline"><%= f.label :registered %></li>    
-                          </ul>
-                          <ul class="field">
-                            <li class="inline"><%= f.check_box :copay_paid %></li>
-                            <li class="inline"><%= f.label :copay_paid %></li>
-                          </ul>
-                          <ul class="field">
-                            <li class="inline"><%= f.check_box :insurance_verified %></li>
-                            <li class="inline"><%= f.label :insurance_verified %></li>
-                          </ul>
+                          <table>
+                            <tr>
+                              <td>
+                                <ul class="field">
+                                  <li class="inline"><%= f.check_box :registered %></li>
+                                  <li class="inline"><%= f.label :registered %></li>    
+                                </ul>
+                              </td>
+                              <td>
+                                  <ul class="field">
+                                    <li class="inline"><%= f.check_box :copay_paid %></li>
+                                    <li class="inline"><%= f.label :copay_paid %></li>
+                                  </ul>
+                                </td>
+                              <td>
+                                <ul class="field">
+                                  <li class="inline"><%= f.check_box :insurance_verified %></li>
+                                  <li class="inline"><%= f.label :insurance_verified %></li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
                           
                           <!--<div class="field">
                             <%#= f.label :scheduled_time %><br />
@@ -216,7 +241,7 @@
                 <li>
                   <a class="btn push-up" data-toggle="modal" href="#contactModal"><i class="icon-comment"></i> Contact</a>
 
-                  <%= render 'contact_modal' %>
+                  <%= render 'contact_modal', cell: patient.cellphone, phone: patient.telephone, email: patient.email %>
                 </li>
 
 
@@ -312,7 +337,7 @@
             <!--<div class="btn-group clear">
                 
                     <%#= link_to 'Edit', edit_patient_path(patient), class: "btn btn-success span4" %>
-                
+              
                     
                
             </div>-->
@@ -360,7 +385,7 @@
 
     <% end %>
 
-    <%= b.inject(:+) %>
+    <% b.inject(:+) %>
 
     </div> <!-- Patient Cards container -->
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926032136) do
+ActiveRecord::Schema.define(:version => 20131010160820) do
 
   create_table "patients", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(:version => 20130926032136) do
     t.boolean  "exit",               :default => false
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+    t.integer  "cellphone"
+    t.integer  "telephone"
+    t.string   "email"
   end
 
 end

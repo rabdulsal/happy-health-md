@@ -120,10 +120,10 @@ td {
 	width: 50%;
 }
 
-#patient-info input {
+.patient-info input {
 	width: 100%;
 }
-	#patient-info li {
+	.patient-info li {
 		margin-right: 10px;
 	}
 
@@ -157,4 +157,8 @@ td {
 .neutral {
 	font-weight: bold;
 	color: blue;
+}
+
+.faded {
+	color: #aaa;
 }

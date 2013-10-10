@@ -10,7 +10,10 @@ class Patient < ActiveRecord::Base
           					:physician, 
           					:registered, 
           					:scheduled_time,
-                    :appointments_attributes
+                    :appointments_attributes,
+                    :cellphone,
+                    :telephone,
+                    :email
 
   has_many :appointments, dependent: :destroy
 

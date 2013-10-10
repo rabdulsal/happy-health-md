@@ -78874,3 +78874,18 @@ Served asset /BCBS%20Ins%20Card.jpg - 304 Not Modified (0ms)
 
 Started GET "/assets/fontawesome-webfont.woff?v=3.0.2" for 127.0.0.1 at 2013-10-09 18:34:58 -0500
 Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (7.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePatients (20130926032136)
+Migrating to AddDetailsToPatients (20131010160820)
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "patients" ADD "cellphone" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "patients" ADD "telephone" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "patients" ADD "email" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131010160820')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
