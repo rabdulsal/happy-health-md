@@ -7,6 +7,8 @@ DoctorPortal::Application.routes.draw do
 
   resources :patients
 
+  get "/our-location" => 'static_pages#our_location'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

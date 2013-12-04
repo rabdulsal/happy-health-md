@@ -1,27 +1,64 @@
-<h2>Calendar</h2>
+<h2>Find Us</h2>
 
 	<div class="calendar-card">
 		<div>
+			<!--
 			<strong>Current Date:</strong>
-			<p><%= Date.today %></p>
+			<p><%#= Date.today %></p>-->
+			<h4>Prius Immediate Care</h4>
 		</div>
 
 		<div>	
+			<!--
 			<strong>Current Time:</strong>
-			<p><%= Time.now %></p>
-		</div>
+			<p><%#= Time.now %></p>-->
+			<strong>Phone Number</strong>
+			<p>(773) 772-5111</p>
+		</div><br />
+
+		<div>
+			<strong>Fax Number</strong>
+			<p>(773) 772-5114</p>
+		</div><br />
 
 		<div>	
+			<!--
 			<strong>Average Visit Time:</strong>
-			<p class="right"><%= Time.now %></p>
-		</div>
+			<p class="right"><%#= Time.now %></p>-->
+			<strong>Address</strong>
+			<p>
+				3650 W. Armitage Ave
+				Chicago, IL 60647-3611
+			</p>
+		</div><br />
 
 		<div>	
+			<!--
 			<strong>Estimated Total Patients:</strong>
-			<p class="right">63</p>
+			<p class="right">63</p>-->
+			
+			<ul class="sans-bullets">
+				<li>
+					<strong>Map</strong>
+				</li>
+				<li>
+					<a href="/our-location">
+						<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=41.917027,-87.718929&zoom=16&size=400x300&maptype=roadmap
+	&markers=color:red%7Ccolor:red%7Clabel:A%7C41.917027,-87.718929&sensor=false" %>
+					</a>
+				</li>
+				<!-- Link to Larger Map on separate page
+				<li>
+					
+				</li>-->
+			</ul>
+		</div><br />
+
+		<div>
+			<a href="/appointments/new" class="btn btn-large">Book an Appointment!</a>
 		</div>
 
-		<div>	
+		<!--<div>	
 			<strong>Actual Patients Seen:</strong>
 			<p class="right">4</p>
 		</div>
@@ -34,6 +71,6 @@
 		<div>	
 			<strong>Actual Co-pay Revenue:</strong>
 			<p class="right">$140</p>
-		</div>
+		</div>-->
 
 	</div>

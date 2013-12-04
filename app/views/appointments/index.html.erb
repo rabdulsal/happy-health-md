@@ -1,5 +1,7 @@
 <h1>Listing appointments</h1>
 
+<!-- Comment-out Everything
+
 <table>
   <tr>
     <th>Scheduled date</th>
@@ -12,20 +14,24 @@
     <th></th>
   </tr>
 
-<% @appointments.each do |appointment| %>
+<%# @appointments.each do |appointment| %>
   <tr>
-    <td><%= appointment.scheduled_date %></td>
-    <td><%= appointment.scheduled_time %></td>
-    <td><%= appointment.arrived %></td>
-    <td><%= appointment.left %></td>
-    <td><%= appointment.arrival_status %></td>
-    <td><%= link_to 'Show', appointment %></td>
-    <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-    <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= appointment.scheduled_date %></td>
+    <td><%#= appointment.scheduled_time %></td>
+    <td><%#= appointment.arrived %></td>
+    <td><%#= appointment.left %></td>
+    <td><%#= appointment.arrival_status %></td>
+    <td><%#= link_to 'Show', appointment %></td>
+    <td><%#= link_to 'Edit', edit_appointment_path(appointment) %></td>
+    <td><%#= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+<%# end %>
 </table>
 
 <br />
 
-<%= link_to 'New Appointment', new_appointment_path %>
+<%#= link_to 'New Appointment', new_appointment_path %>
+
+-->
+
+

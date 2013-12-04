@@ -64,12 +64,16 @@ td {
  }
 
  .calendar-card {
- 	min-height: 500px;
+ 	min-height: 500px; 	
  }
 
  .calendar-card p {
  	margin: 0 0;
  }
+
+.calendar-tab {
+ 	min-width: 175px;
+}
 
  .inline-list li {
  	display: inline-block;

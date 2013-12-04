@@ -2,26 +2,60 @@
 
 	<div class="calendar-card">
 		<div>
+			<!--
 			<strong>Current Date:</strong>
-			<p><%= Date.today %></p>
+			<p><%#= Date.today %></p>-->
+			<h4>Prius Immediate Care</h4>
 		</div>
 
 		<div>	
+			<!--
 			<strong>Current Time:</strong>
-			<p><%= Time.now %></p>
-		</div>
+			<p><%#= Time.now %></p>-->
+			<strong>Phone Number</strong>
+			<p>(773) 772-5111</p>
+		</div><br />
+
+		<div>
+			<strong>Fax Number</strong>
+			<p>(773) 772-5114</p>
+		</div><br />
 
 		<div>	
+			<!--
 			<strong>Average Visit Time:</strong>
-			<p class="right"><%= Time.now %></p>
-		</div>
+			<p class="right"><%#= Time.now %></p>-->
+			<strong>Address</strong>
+			<p>
+				3650 W. Armitage Ave
+				Chicago, IL 60647-3611
+			</p>
+		</div><br />
 
 		<div>	
+			<!--
 			<strong>Estimated Total Patients:</strong>
-			<p class="right">63</p>
+			<p class="right">63</p>-->
+			
+			<ul class="sans-bullets">
+				<li>
+					<strong>Map</strong>
+				</li>
+				<li>
+					<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=41.917027,-87.718929&zoom=16&size=400x300&maptype=roadmap
+	&markers=color:red%7Ccolor:red%7Clabel:A%7C41.917027,-87.718929&sensor=false" %>
+				</li>
+				<!-- Link to Larger Map on separate page
+				<li>
+					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Prius+Immediate+Care,+West+Armitage+Avenue,+Chicago,+IL&amp;aq=0&amp;oq=prius+imm&amp;sll=41.833733,-87.731964&amp;sspn=0.602669,1.290894&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=41.917027,-87.718929&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Prius+Immediate+Care,+West+Armitage+Avenue,+Chicago,+IL&amp;aq=0&amp;oq=prius+imm&amp;sll=41.833733,-87.731964&amp;sspn=0.602669,1.290894&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=41.917027,-87.718929&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+				</li>-->
+			</ul>
+
+			<a href="/appointments/new" class="btn btn-primary">Save Appointment</a>
+
 		</div>
 
-		<div>	
+		<!--<div>	
 			<strong>Actual Patients Seen:</strong>
 			<p class="right">4</p>
 		</div>
@@ -34,6 +68,6 @@
 		<div>	
 			<strong>Actual Co-pay Revenue:</strong>
 			<p class="right">$140</p>
-		</div>
+		</div>-->
 
 	</div>

@@ -1,28 +1,102 @@
-<%= form_for(@appointment) do |f| %>
-  <% if @appointment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+<%#= form_for(@appointment) do |f| %>
+  <%# if @appointment.errors.any? %>
+    <!--<div id="error_explanation">
+      <h2><%#= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
 
       <ul>
-      <% @appointment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+      <%# @appointment.errors.full_messages.each do |msg| %>
+        <li><%#= msg %></li>
+      <%# end %>
       </ul>
-    </div>
-  <% end %>
+    </div>-->
+  <%# end %>
 
   <!--<div class="field">
     <%#= f.label :scheduled_date %><br />
     <%#= f.date_select :scheduled_date %>
   </div>-->
-  <div class="field">
-    <%#= f.label "Appointment Date & Time" %>
-    <%#= f.datetime_select :scheduled_time %>
 
+  <h3>Demographic Information</h3>
+  <form class="form-inline">
+    <h5>Name</h5>
+    <input type="text" placeholder="First Name">
+    <input type="password" placeholder="Last Name">
+  </form>
+
+  <form class="form-inline">
+    <h5>Phone Number</h5>
+    <input type="text" placeholder="Area Code" class="input-small">
+    <input type="text" placeholder="Phone Number">
+  </form>
+
+
+  <h3>Insurance Information</h3>
+  <form>
+    <h5>Insurance Company</h5>
+    <select>
+      <option>Aetna</option>
+      <option>Blue Cross Blue Shield</option>
+      <option>Cigna</option>      
+      <option>UHC</option>
+      <option>Medicare</option>
+      <option>Medicaid</option>
+    </select>
+  
+    <h5>ID Number</h5>
+    <input type="text" placeholder="">
+
+    <h5>Group Name</h5>
+    <input type="text" placeholder="">
+
+    <h5>Group Number</h5>
+    <input type="text" placeholder="">
+
+    <h5>Effective Date</h5>
+    <input type="text" placeholder="">
+  </form>
+
+  <h3>Appointment Information</h3>
+  <form>
+    <h5>Preferred Appointment Date</h5>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox1" value="Monday"> Mon
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox2" value="Tuesday"> Tue
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox3" value="Wednesday"> Wed
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox4" value="Thursday"> Thur
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox5" value="Friday"> Fri
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox6" value="Saturday"> Sat
+    </label>    
+  </form>
+
+  <form>
+    <h5>Preferred Appointment Time</h5>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox7" value="Morning"> Morning
+    </label>
+    <label class="radio inline">
+      <input type="radio" id="inlineCheckbox8" value="Afternoon"> Afternoon
+    </label>
+  </form>
+
+
+  <!--**************** SPECIFIC APPOINTMENTS *******************-->
+  <!--
     <ul class="inline-list">
       <h4>Appointment Date</h4>
+    -->
 
   <!-- MONTH -->
+  <!--
       <li>
         <strong>Month</strong></br />
         <select id="appointment_scheduled_time_2i" name="appointment[scheduled_time(2i)]" class="span2">
@@ -40,8 +114,10 @@
           <option value="12">December</option>
         </select>
       </li>
+    -->
 
     <!-- DAY -->
+    <!--
       <li>
         <strong>Day</strong></br />
         <select id="appointment_scheduled_time_3i" name="appointment[scheduled_time(3i)]" class="span2">
@@ -78,16 +154,14 @@
           <option value="31">31</option>
         </select>
       </li>
+    -->
+
+    <!-- YEAR -->
+    <!--
       <li>
-        <!-- YEAR -->
+        
           <strong>Year</strong></br />
-          <select id="appointment_scheduled_time_1i" name="appointment[scheduled_time(1i)]" class="span2">
-            <option value="2008">2008</option>
-            <option value="2009">2009</option>
-            <option value="2010">2010</option>
-            <option value="2011">2011</option>
-            <option value="2012">2012</option>
-            <option value="2013">2013</option>
+          <select id="appointment_scheduled_time_1i" name="appointment[scheduled_time(1i)]" class="span2">                        
             <option value="2014">2014</option>
             <option value="2015">2015</option>
             <option value="2016">2016</option>
@@ -95,11 +169,15 @@
             <option value="2018">2018</option>
           </select>
       </li>
+
     </ul>
+    -->
+    <!--
     <ul class="inline-list">
-      <h4>Appointment Time</h4>
+      <h4>Appointment Time</h4>-->
 
       <!-- HOUR -->
+      <!--
       <li>
         <strong>Hour</strong></br />
         <select id="appointment_scheduled_time_4i" name="appointment[scheduled_time(4i)]" class="span2">
@@ -129,8 +207,9 @@
           <option value="23">23</option>
         </select>
       </li>
-
+      -->
       <!-- MINUTE -->
+      <!--
       <li>
         <strong>Minute</strong></br />
         <select id="appointment_scheduled_time_5i" name="appointment[scheduled_time(5i)]" class="span2">
@@ -145,21 +224,28 @@
         </select>
       </li>
     </ul>
-    
+    -->
+    <button type="submit" class="btn btn-success">Save Appointment</button>
+
+  <!--<div class="field">
+    <%#= f.label "Appointment Date & Time" %>
+    <%#= f.datetime_select :scheduled_time %>
+
+  </div>
+
+  <div class="field">
+    <%#= f.label :arrived %><br />
+    <%#= f.check_box :arrived %>
   </div>
   <div class="field">
-    <%= f.label :arrived %><br />
-    <%= f.check_box :arrived %>
+    <%#= f.label :left %><br />
+    <%#= f.check_box :left %>
   </div>
   <div class="field">
-    <%= f.label :left %><br />
-    <%= f.check_box :left %>
-  </div>
-  <div class="field">
-    <%= f.label :arrival_status %><br />
-    <%= f.text_field :arrival_status %>
+    <%#= f.label :arrival_status %><br />
+    <%#= f.text_field :arrival_status %>
   </div>
   <div>
-    <%= f.submit "Save Appointment", class: "btn btn-success btn-large" %>
-  </div>
-<% end %>
+    <%#= f.submit "Save Appointment", class: "btn btn-success btn-large" %>
+  </div> -->
+<%# end %>

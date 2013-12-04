@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
 
   def index
-    @appointments = Appointment.all
+    #@appointments = Appointment.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   # GET /appointments/new.json
   def new
-    @appointment = Appointment.new
+    #@appointment = Appointment.new
 
     respond_to do |format|
       format.html # new.html.erb
