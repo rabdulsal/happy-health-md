@@ -32,6 +32,14 @@ td {
  	margin: 0 0 10px 0 !important;
  }
 
+.container {
+
+}
+
+ .prius-header {
+ 	position: relative;
+ }
+
  .sans-bullets {
  	list-style: none;
  }
@@ -55,16 +63,47 @@ td {
  	float: right;
  }
 
- .patient-card, .calendar-card {
- 	border: 1px solid #f8f8f8;
- 	background: #fff;
- 	border-radius: 5px;
- 	padding: 10px;
- 	box-shadow: 0 2px 2px #555;
- }
+.nav-box {
+	position: absolute;
+	top: 90%;
+	/*border: 1px solid red;*/
+	height: 10%;
+}
+
+.home-box {	
+	width: 9%;
+}
+
+.location-box {
+	position: absolute;	
+	right: 18%;	
+	width: 13%;
+}
+
+.appointments-box {
+	position: absolute;	
+	right: 0%;
+	width: 17%;
+}
+
+.nav-box:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.patient-card, .calendar-card {
+	border: 1px solid #f8f8f8;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 2px 2px #555;
+}
 
  .calendar-card {
  	min-height: 500px; 	
+ }
+
+ .block {
+ 	display: block !important;
  }
 
  .calendar-card p {
@@ -84,29 +123,29 @@ td {
  	min-width: 120px;
  }
 
- .clear {
- 	clear: both;
- }
+.clear {
+	clear: both;
+}
 
- .inline {
- 	display: inline-block;
- }
+.inline {
+	display: inline-block;
+}
 
- #insuranceModal, .long-modal {
- 	position: absolute;
- 	top: 0px !important;
- }
- 	#insuranceModal .modal-body, .long-modal .modal-body {
- 		max-height: 100%;
- 	}
+#insuranceModal, .long-modal {
+	position: absolute;
+	top: 0px !important;
+}
+	#insuranceModal .modal-body, .long-modal .modal-body {
+		max-height: 100%;
+	}
 
- .ratio {
- 	min-width: 200px;
- }
+.ratio {
+	min-width: 200px;
+}
 
- .patient-photo {
- 	max-height: 100px;
- }
+.patient-photo {
+	max-height: 100px;
+}
 
 .padded, .padded li {
 	padding: 0 10px;
@@ -118,6 +157,10 @@ td {
 
 .full-width {
 	width: 100%;
+}
+
+.no-overflow {
+	overflow: hidden;
 }
 
 .half-width {
@@ -145,7 +188,7 @@ td {
 }
 
 .push-down {
-	margin-bottom: 10px !important;
+	margin-bottom: 20px !important;
 }
 
 .good {
@@ -161,4 +204,8 @@ td {
 .neutral {
 	font-weight: bold;
 	color: blue;
+}
+
+.white-background {
+	background-color: #fff !important;
 }

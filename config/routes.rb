@@ -1,6 +1,6 @@
 DoctorPortal::Application.routes.draw do
   
-  root to: "patients#index"
+  root to: "static_pages#home"
 
   resources :appointments
 
