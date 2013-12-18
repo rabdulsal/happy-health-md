@@ -32,6 +32,15 @@ td {
  	margin: 0 0 10px 0 !important;
  }
 
+.search-bar {
+	height: 30px !important;
+	width: 97%;
+}
+
+	input.search-bar {
+		
+	}
+
 .container {
 
 }
@@ -102,7 +111,7 @@ td {
  	min-height: 500px; 	
  }
 
- .block {
+.block {
  	display: block !important;
  }
 
