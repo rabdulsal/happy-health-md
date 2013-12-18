@@ -1,0 +1,77 @@
+<h1>Angio Page</h1>
+
+<div class="patient-card">
+
+  <!-- ****************** SEARCH BAR ****************** -->
+  <form>
+    <legend>
+      Search Patients
+    </legend>  
+
+    <input type="text" placeholder="Search" class="search-bar">
+    <span class="search-bar"></span>  
+  </form>
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+          <%= image_tag "Teresa Nam.jpg", size: "30x30", class: "img-rounded" %> John Doe - Dec 1, 2013
+        </a>
+      </div>
+      <div id="collapseOne" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <span class="label">aneurysm</span>
+          <span class="label">coil + stent</span>
+          <span class="label">CT</span>
+          <br /><br />
+          <%= video_tag "EndoVideo1_converted.mp4", controls: true, class: "full-width" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Collapse -->
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+          <%= image_tag "Teresa Nam.jpg", size: "30x30", class: "img-rounded" %> John Doe - Dec 2, 2013
+        </a>
+      </div>
+      <div id="collapseTwo" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <span class="label">sub-arachnoid hemorrhage</span>
+          <span class="label">coil</span>
+          <span class="label">3D-CT</span>
+          <br /><br />
+          <%= video_tag "ANEENTTAR_converted.mp4", controls: true, class: "full-width" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Collapse -->
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+          <%= image_tag "Teresa Nam.jpg", size: "30x30", class: "img-rounded" %> Jack Doe - Dec 3, 2013
+        </a>
+      </div>
+      <div id="collapseThree" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <span class="label">AVM</span>
+          <span class="label">embolization</span>
+          <span class="label">MRI</span>
+          <br /><br />
+          <%= video_tag "EndoVideo2_converted.mp4", controls: true, class: "full-width" %>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Full Accordion -->               
+</div><!-- Patient card -->               
+
+  <!--<ul>
+  	<li>
+  		<%#= video_tag "ANEENTTAR_converted.mp4", controls: true, class: "full-width" %>
+  	</li>
+  	<li>
+  		<%#= video_tag "ANEENTTAR.mov", controls: true, class: "full-width" %>
+  	</li>
+  </ul> -->
