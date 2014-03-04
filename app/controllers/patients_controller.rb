@@ -14,7 +14,9 @@ class PatientsController < ApplicationController
   end
 
   def index
-    @patients = Patient.all
+    #@patients = Patient.all
+    @leaving_patients = Patient.where arrived: true
+    @arriving_patients = Patient.where arrived: false
 
     respond_to do |format|
       format.html # index.html.erb

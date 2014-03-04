@@ -15,24 +15,10 @@
 		</h3> -->
 
 		<div class="row">		
-			<div class="span10 offset1">
-				<div class="prius-header push-down">
-					<%= image_tag "prius_header_banner.jpg", class: "full-width" %>
-					<%= link_to "", "/", class: "home-box nav-box" %>
-					<%= link_to "", "/our-location", class: "location-box nav-box" %>
-					<%= link_to "", "/appointments/new", class: "appointments-box nav-box" %>
-				</div>
-				<div class="row">
-					<!-- <div class="span3 pull-left"></div> -->
-					<div class="span7">
-						<%= yield %>
-					</div>
-
-					<div class="span3">
-					<!--<div class="span3 calendar-tab" data-spy="affix" data-offset-top="200">-->
-						<%= render 'layouts/calendar' %>				
-					</div>
-				</div>
+			<div class="span12">
+				
+				<%= yield %>
+					
 			</div>
 		</div>
 	</div>
